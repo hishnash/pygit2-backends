@@ -21,7 +21,7 @@ setup(name="pygit2_backends",
       install_requires=['pygit2'],
       ext_modules=[Extension('_pygit2_backends',
                              ['src/pygit2_backends.c', 'backends/mysql/mysql.c'],
-                             include_dirs=['/usr/include/mysql', libgit2_include],
+                             include_dirs=['/usr/local/include/mysql', libgit2_include],
                              library_dirs=[libgit2_lib],
                              libraries=['git2', 'mysqlclient'])],
       )
